@@ -1,0 +1,69 @@
+1. Restore Root password
+
+2. Set up network parameters
+
+3. Change hostname
+
+4. Enable SElinux
+
+5. Install Apache and allow it to get documents from NFS mounted folder (SELinux part
+
+6. Extend the existing xfs file system to a total size of 200MB and add a label called myFS
+
+7. Assign the same SELinux contexts used by the home directories to the /xfs directory permanently.
+
+8. Create two users: john with uid/gid equal to 2000, password 12345678 and davis with uid/gid equal to 3000, password 87654321. Make davis' account validity stopping in one month.
+
+9. Allow davis (and only davis) to get full access to john's home directory.
+
+10. Create a directory named /common. Allow john and davis to share documents in the /common directory using a group called team. Both of them can read, write and remove documents from the other in this directory but any user not member of the group can’t.
+
+11. Create a xfs file system on a new logical volume of 100MB called lv_xfs. Mount it permanently with uuid under /xfs
+
+12. Create a logical volume of 200MB called lv_swap2 and add it permanently to the current swap space
+
+13. Create a cron job running as root, starting at 11PM every day and writing a report on daily system resource consumption in the /var/log/consumption.log file.
+
+14. Set the default target to boot into X Window level (previously level 5).
+
+15. Add additional repository for YUM with name my_custom_repo which can be found via URL http://local.repo/rhel7
+
+16. Create new physical partition with 100MB size and mount it under /meet
+
+17. Install new kernel and make it default
+
+18. Create users and assign them to secondary groups
+    Create group sysgrp
+    Create user andrew and susan who belong to this group (as secondary group)
+    Create user sarah who does not have an access to the shell
+    Password for all the users should be Postroll
+    
+19. Create folder with group access rights
+    group ownership of the folder is for group sysgrp
+    members of sysgrp should have full access to this folder but no other user
+    files created in this folder have by default group access to sysgrp
+
+
+20. Configure LDAP authentication
+
+21. Configure autofs
+
+22. Configure new NTP server
+
+23. Configure access rights to the file (factl)
+
+24. Reduce the size of existing logical volume
+
+25. Create compressed archive
+
+26. Search for string using grep and redirect the output
+
+27. Make journald persistent between reboots
+
+28. Configure block device to use VDO
+
+29. Find files with specific properties (not modified for 180 days)
+
+30. Find files containing specific text within
+
+
