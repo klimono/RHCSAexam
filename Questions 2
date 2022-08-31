@@ -1,0 +1,35 @@
+1. ustawić ip
+
+2. zmienić hostname
+
+3. skonfigurować repo
+
+4. dodać joba do crontaba aby wykonywal sie codziennie o godzinie x
+
+5. znajdz pliki ktorych wlascicielem jest user x i skopiuj do katalogu /tmp/xyz
+
+6. dodaj 3 userow i dodaj ich do grupy sysadms (utworz grupe jesli nie istnieje)
+
+7. zarchiwizuj katalog /home/user1/test (metoda kompresji bzip2)
+
+8. utworzyc z dostepnej partycji (10G) VDO volume (logical size 50G), zamontowac w /vdo1 i upewnic sie ze bedzie montowany automatycznie przy starcie systemu
+
+9. selinux troubleshooting: serwis HTTPD nie dziala - nasluchuje na niestandardowym porcie 84, dlatego trzeba go zalabelowac (context type: httpd_port_t)
+
+10. serwis HTTPD ma startowac automatycznie
+
+11. ACLKi: user natasha ma miec prawa RW do pliku "abc", a user harry do tego samego pliku ma nie miec uprawnien w ogole (setfacl)
+
+12. znajdz wszystkie linie ktore zawieraja string "xyz" w pliku test i przekieruj rezultaty do pliku /home/user1/results
+
+13. root password reset
+
+14. powiekszyc istniejacy LV z 200MB do 300MB
+
+15. utworzyc LV o nazwie datastore w volume grupie o nazwie vgdata (rozmiar PE: 8 MB)
+
+16. kontenery: pobrac image "rsyslog" z rejestru obrazow; skonfigurowac tak by startowal przy starcie systemu jako serwis; kontener musi dzialac na koncie zwyklego usera; skonfigurowac "persistent storage" dla kontenera /home/user1/container_journal:/var/log/journal
+
+17. autofs: tutaj dokladnie nie pamietam, ale chodzilo o to by zasob NFS montowal sie userowi automatycznie przy logowaniu
+
+18. chronyd: ustawic synchronizacje z serwerem utility1.lab.example.com
