@@ -4,13 +4,13 @@ X. zmienić hostname
 
 X. skonfigurować repo
 
-4. dodać joba do crontaba aby wykonywal sie codziennie o godzinie x
+X. dodać joba do crontaba aby wykonywal sie codziennie o godzinie x
 
-5. znajdz pliki ktorych wlascicielem jest user x i skopiuj do katalogu /tmp/xyz
+X. znajdz pliki ktorych wlascicielem jest user x i skopiuj do katalogu /tmp/xyz
 
 6. dodaj 3 userow i dodaj ich do grupy sysadms (utworz grupe jesli nie istnieje)
 
-7. zarchiwizuj katalog /home/user1/test (metoda kompresji bzip2)
+X. zarchiwizuj katalog /home/user1/test (metoda kompresji bzip2)
 
 8. utworzyc z dostepnej partycji (10G) VDO volume (logical size 50G), zamontowac w /vdo1 i upewnic sie ze bedzie montowany automatycznie przy starcie systemu
 
@@ -18,9 +18,9 @@ X. selinux troubleshooting: serwis HTTPD nie dziala - nasluchuje na niestandardo
 
 X. serwis HTTPD ma startowac automatycznie
 
-11. ACLKi: user natasha ma miec prawa RW do pliku "abc", a user harry do tego samego pliku ma nie miec uprawnien w ogole (setfacl)
+X. ACLKi: user natasha ma miec prawa RW do pliku "abc", a user harry do tego samego pliku ma nie miec uprawnien w ogole (setfacl)
 
-12. znajdz wszystkie linie ktore zawieraja string "xyz" w pliku test i przekieruj rezultaty do pliku /home/user1/results
+X. znajdz wszystkie linie ktore zawieraja string "xyz" w pliku test i przekieruj rezultaty do pliku /home/user1/results
 
 13. root password reset
 
