@@ -8,7 +8,7 @@ X. dodać joba do crontaba aby wykonywal sie codziennie o godzinie x
 
 X. znajdz pliki ktorych wlascicielem jest user x i skopiuj do katalogu /tmp/xyz
 
-6. dodaj 3 userow i dodaj ich do grupy sysadms (utworz grupe jesli nie istnieje)
+!!! dodaj 3 userow i dodaj ich do grupy sysadms (utworz grupe jesli nie istnieje)
 
 X. zarchiwizuj katalog /home/user1/test (metoda kompresji bzip2)
 
@@ -22,11 +22,19 @@ X. ACLKi: user natasha ma miec prawa RW do pliku "abc", a user harry do tego sam
 
 X. znajdz wszystkie linie ktore zawieraja string "xyz" w pliku test i przekieruj rezultaty do pliku /home/user1/results
 
-13. root password reset
+!!! root password reset
+- zmienić wpis w GRUB
+ro na rw init=/sysroot/bin/sh
+chroot /sysroot
 
-14. powiekszyc istniejacy LV z 200MB do 300MB
+!!! powiekszyc istniejacy LV z 200MB do 300MB
+- lvextend -l +100M /dev/filesystem
+- resize2fs /dev/filesystem
 
 15. utworzyc LV o nazwie datastore w volume grupie o nazwie vgdata (rozmiar PE: 8 MB)
+- pvcreate /dev/sdx
+- vgcreate vgdata /dev/sdx
+- lvcreate -L 8M -n datastore vgdata
 
 16. kontenery: pobrac image "rsyslog" z rejestru obrazow; skonfigurowac tak by startowal przy starcie systemu jako serwis; kontener musi dzialac na koncie zwyklego usera; skonfigurowac "persistent storage" dla kontenera /home/user1/container_journal:/var/log/journal
 
