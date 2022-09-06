@@ -1,20 +1,12 @@
-1. Restore Root password
-
-2. Set up network parameters
-
-3. Change hostname
-
-4. Enable SElinux
-
 5. Install Apache and allow it to get documents from NFS mounted folder (SELinux part
 
-6. Extend the existing xfs file system to a total size of 200MB and add a label called myFS
+!!! Extend the existing xfs file system to a total size of 200MB and add a label called myFS
+lvextend 
+lvrename
 
 7. Assign the same SELinux contexts used by the home directories to the /xfs directory permanently.
 
 8. Create two users: john with uid/gid equal to 2000, password 12345678 and davis with uid/gid equal to 3000, password 87654321. Make davis' account validity stopping in one month.
-
-9. Allow davis (and only davis) to get full access to john's home directory.
 
 10. Create a directory named /common. Allow john and davis to share documents in the /common directory using a group called team. Both of them can read, write and remove documents from the other in this directory but any user not member of the group can’t.
 
