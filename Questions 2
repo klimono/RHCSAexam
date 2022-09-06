@@ -40,4 +40,7 @@ chroot /sysroot
 
 17. autofs: tutaj dokladnie nie pamietam, ale chodzilo o to by zasob NFS montowal sie userowi automatycznie przy logowaniu
 
-18. chronyd: ustawic synchronizacje z serwerem utility1.lab.example.com
+!!! chronyd: ustawic synchronizacje z serwerem utility1.lab.example.com
+yum install chrony
+chronyd -q "url iburst"
+systemctl enable chronyd
