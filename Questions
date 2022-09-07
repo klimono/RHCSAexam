@@ -1,26 +1,27 @@
-5. Install Apache and allow it to get documents from NFS mounted folder (SELinux part
 
-!!! Extend the existing xfs file system to a total size of 200MB and add a label called myFS
+X Extend the existing xfs file system to a total size of 200MB and add a label called myFS
 lvextend 
 lvrename
 
-7. Assign the same SELinux contexts used by the home directories to the /xfs directory permanently.
+X. Assign the same SELinux contexts used by the home directories to the /xfs directory permanently.
 
-8. Create two users: john with uid/gid equal to 2000, password 12345678 and davis with uid/gid equal to 3000, password 87654321. Make davis' account validity stopping in one month.
+. Create two users: john with uid/gid equal to 2000, password 12345678 and davis with uid/gid equal to 3000, password 87654321. Make davis' account validity stopping in one month.
 
-10. Create a directory named /common. Allow john and davis to share documents in the /common directory using a group called team. Both of them can read, write and remove documents from the other in this directory but any user not member of the group can’t.
+X. Create a directory named /common. Allow john and davis to share documents in the /common directory using a group called team. Both of them can read, write and remove documents from the other in this directory but any user not member of the group can’t.
 
-11. Create a xfs file system on a new logical volume of 100MB called lv_xfs. Mount it permanently with uuid under /xfs
+X. Create a xfs file system on a new logical volume of 100MB called lv_xfs. Mount it permanently with uuid under /xfs
+STANDARD PARTITION - UUID
+LVM - USE PATH 
 
 12. Create a logical volume of 200MB called lv_swap2 and add it permanently to the current swap space
 
-13. Create a cron job running as root, starting at 11PM every day and writing a report on daily system resource consumption in the /var/log/consumption.log file.
+X. Create a cron job running as root, starting at 11PM every day and writing a report on daily system resource consumption in the /var/log/consumption.log file.
 
-14. Set the default target to boot into X Window level (previously level 5).
+X. Set the default target to boot into X Window level (previously level 5).
 
-15. Add additional repository for YUM with name my_custom_repo which can be found via URL http://local.repo/rhel7
+X. Add additional repository for YUM with name my_custom_repo which can be found via URL http://local.repo/rhel7
 
-16. Create new physical partition with 100MB size and mount it under /meet
+X. Create new physical partition with 100MB size and mount it under /meet
 
 17. Install new kernel and make it default
 
@@ -40,15 +41,15 @@ lvrename
 
 21. Configure autofs
 
-22. Configure new NTP server
+X. Configure new NTP server
 
-23. Configure access rights to the file (factl)
+X. Configure access rights to the file (factl)
 
 24. Reduce the size of existing logical volume
 
-25. Create compressed archive
+X. Create compressed archive
 
-26. Search for string using grep and redirect the output
+X. Search for string using grep and redirect the output
 
 27. Make journald persistent between reboots
 
